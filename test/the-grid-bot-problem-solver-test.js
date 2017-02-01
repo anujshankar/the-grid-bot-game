@@ -3,8 +3,6 @@ var expect = chai.expect;
 var assert = chai.assert;
 var gridProblemSolver = require('../the-grid-problem-solver');
 
-// assert.deepEqual(obtainedResult, expectedResult);
-
 describe('gridProblemSolver function with input as grid,initialPosition and directionCommands', function () {
 
   it('should return an array', function () {
