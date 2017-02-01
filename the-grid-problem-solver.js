@@ -13,7 +13,7 @@ function gridProblemSolver(grid, initialBotPosition, directionCommands) {
   var yAxisBoundary = grid[1];
 
   for (var i = 0; i < directionCommands.length; i++) {
-    move = directionCommands[i];
+    var move = directionCommands[i];
     if (move === 'R') {
       currDirection = (currDirection + 1) % 4;
     }
