@@ -21,7 +21,7 @@ var grid = gridWithStringElements.map(function (element) {
   return element;
 });
 if (!isGridInputValid) {
-  console.log("The grid size entered are is not a number. Please check your input file");
+  console.log("The grid size entered are not a number. Please check your input file");
   return;
 }
 

@@ -27,7 +27,7 @@ function gridProblemSolver(grid, initialBotPosition, directionCommands) {
         currentX++;
       else if (currDirection === directions['S'] && currentY < yAxisBoundary)
         currentY++;
-      else if( currDirection === directions['W'] && currentX > 0)
+      else if (currDirection === directions['W'] && currentX > 0)
         currentX--;
     }
   }
