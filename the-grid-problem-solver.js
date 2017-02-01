@@ -14,25 +14,25 @@ function gridProblemSolver(grid, initialBotPosition, directionCommands) {
 
   for (var i = 0; i < directionCommands.length; i++) {
     move = directionCommands[i];
-    if (move == 'R') {
+    if (move === 'R') {
       currDirection = (currDirection + 1) % 4;
     }
-    else if (move == 'L') {
+    else if (move === 'L') {
       currDirection = (4 + currDirection - 1) % 4;
     }
     else {
-      if (currDirection === directions['N'])
-        currentY++;
-      else if (currDirection === directions['E'])
-        currentX++;
-      else if (currDirection === directions['S'])
+      if (currDirection === directions['N'] && currentY > 0)
         currentY--;
-      else
+      else if (currDirection === directions['E'] && currentX < xAxisBoundary)
+        currentX++;
+      else if (currDirection === directions['S'] && currentY < yAxisBoundary)
+        currentY++;
+      else if( currDirection === directions['W'] && currentX > 0)
         currentX--;
-    }   
+    }
   }
   var finalDirection;
-  switch(currDirection){
+  switch (currDirection) {
     case 0: finalDirection = 'North'; break;
     case 1: finalDirection = 'East'; break;
     case 2: finalDirection = 'South'; break;
